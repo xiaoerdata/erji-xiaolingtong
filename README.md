@@ -4,12 +4,12 @@
 
 围绕数据调用、口径核对、指标计算与组合分析组织内容。平台数据与自有文件分别注明来源，参考净值与原始净值区分，脱敏名称按原样保留。
 
-## 下载 v1.0.1
+## 下载 v1.0.2
 
-- [二级小灵通.skill](https://github.com/xiaoerdata/erji-xiaolingtong/releases/download/v1.0.1/erji-xiaolingtong.skill)：标准技能包，ZIP 内容，适用于支持该格式的宿主。
-- [标准 ZIP](https://github.com/xiaoerdata/erji-xiaolingtong/releases/download/v1.0.1/erji-xiaolingtong.zip)：解压后按客户端方式安装文件夹。
-- [WorkBuddy ZIP](https://github.com/xiaoerdata/erji-xiaolingtong/releases/download/v1.0.1/erji-xiaolingtong-workbuddy.zip)：同一套内容，补充 WorkBuddy 官方格式要求的双语展示、版本和作者字段。
-- [SHA256SUMS](https://github.com/xiaoerdata/erji-xiaolingtong/releases/download/v1.0.1/SHA256SUMS)：校验下载文件。
+- [二级小灵通.skill](https://github.com/xiaoerdata/erji-xiaolingtong/releases/download/v1.0.2/erji-xiaolingtong.skill)：标准技能包，ZIP 内容，适用于支持该格式的宿主。
+- [标准 ZIP](https://github.com/xiaoerdata/erji-xiaolingtong/releases/download/v1.0.2/erji-xiaolingtong.zip)：解压后按客户端方式安装文件夹。
+- [WorkBuddy ZIP](https://github.com/xiaoerdata/erji-xiaolingtong/releases/download/v1.0.2/erji-xiaolingtong-workbuddy.zip)：同一套内容，补充 WorkBuddy 官方格式要求的双语展示、版本和作者字段。
+- [SHA256SUMS](https://github.com/xiaoerdata/erji-xiaolingtong/releases/download/v1.0.2/SHA256SUMS)：校验下载文件。
 - [平台 MCP 接入指引](https://www.xiaoerdata.site/#/mcp/overview)：从平台跳转至 GitHub 获取技能。
 
 ## 安装和使用

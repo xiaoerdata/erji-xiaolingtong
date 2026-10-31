@@ -7,14 +7,14 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 SLUG = "erji-xiaolingtong"
-VERSION = "1.0.1"
+VERSION = "1.0.2"
 FILES = ["SKILL.md", "agents/openai.yaml", "assets/example-nav.csv", "scripts/compare_nav.py",
          *[f"references/{name}.md" for name in ["connection", "private-funds", "public-funds", "market-cases", "data-methods", "prompts"]]]
 WB_METADATA = '''display_name: "二级小灵通"
 display_name_en: "Secondary Market Companion"
 description_zh: "用小二 MCP 或自有数据做基金比较、市场观察和交叉分析，注明来源、日期与指标口径。"
 description_en: "Analyze funds and markets with Xiaoer MCP or your own data, reconciling sources, dates, metrics and supporting evidence."
-version: "1.0.1"
+version: "1.0.2"
 author: "xiaoerdata"
 examples_zh:
   - "比较几只基金最近半年的收益和回撤"
