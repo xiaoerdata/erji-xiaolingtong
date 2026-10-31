@@ -19,7 +19,7 @@ python3 scripts/compare_nav.py assets/example-nav.csv --value-kind adjusted-nav 
 - 年化收益 = (末值 / 首值)^(365.25 / 日历天数) − 1。区间不足一年时返回 NULL，不放大短样本表现。
 - 采样最大回撤 = min(当期净值 / 截至当期的峰值 − 1)。这是共同日期样本上的回撤，可能漏掉完整日频内更深回撤。
 - 不输出夏普或年化波动率：不规则估值、缺失观察和频率差异需要另行确认，不能拿一个默认年化系数硬算。
-- `--value-kind reference-nav` 用于 Core 近似参考净值，输出明确标记近似口径。不能把它改名为原始净值。
+- `--value-kind reference-nav` 用于 近似参考净值，输出明确标记近似口径。不能把它改名为原始净值。
 
 ## 其他常用指标
 

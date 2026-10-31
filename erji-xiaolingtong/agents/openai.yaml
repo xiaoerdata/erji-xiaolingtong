@@ -1,4 +1,4 @@
 interface:
   display_name: "二级小灵通"
-  short_description: "用小二 MCP 或自有数据做基金比较、行情复盘与市场观察，按 Core 权限使用"
-  default_prompt: "使用 $erji-xiaolingtong，根据我当前的 Core 数据权限做一份有来源、有日期的二级市场分析。"
+  short_description: "用小二 MCP 或自有数据做基金比较、行情复盘与交叉验证，说明来源、日期和指标口径"
+  default_prompt: "使用 $erji-xiaolingtong，调用本次研究所需数据，核对来源、日期与指标口径，并结合支持证据和相反证据完成分析。"

@@ -51,11 +51,14 @@ class PackageTests(unittest.TestCase):
                 self.assertNotIn("..", Path(n).parts)
                 self.assertNotIn("__pycache__", n)
             self.assertIsNone(z.testzip())
+            for name in z.namelist():
+                if name.endswith((".md", ".yaml")):
+                    self.assertNotRegex(z.read(name).decode(), r"(?i)\b(?:core|vip)\b")
         with zipfile.ZipFile(io.BytesIO(pack.archive(True))) as z:
             skill = z.read(pack.SLUG + "/SKILL.md").decode()
             self.assertIn('display_name: "二级小灵通"', skill)
-            self.assertIn('version: "1.0.0"', skill)
-            self.assertIn("Core", skill)
+            self.assertIn(f'version: "{pack.VERSION}"', skill)
+            self.assertNotRegex(skill, r"(?i)\b(?:core|vip)\b")
             self.assertNotIn("TODO", skill)
 
 if __name__ == "__main__":

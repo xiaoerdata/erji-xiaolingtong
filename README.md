@@ -2,15 +2,15 @@
 
 给 Agent 的二级市场分析技能。用小二 MCP 或自己的 CSV/JSON，把基金比较、行情复盘、股票量价、融资与披露持仓、期货及跨资产问题做成有数据日期和来源的分析。
 
-**标准版以小二 Core 可用读取能力为上限。** 不包含 VIP 专属调用、公司账户数据、内部模型、真实用户资料或凭据。MCP 的权限、产品范围、字段脱敏和额度仍由服务端执行；安装技能不会增加权限。私募参考净值与原始净值分开，脱敏名称不还原。
+围绕数据调用、口径核对、指标计算与组合分析组织内容。平台数据与自有文件分别注明来源，参考净值与原始净值区分，脱敏名称按原样保留。
 
-## 下载 v1.0.0
+## 下载 v1.0.1
 
-- [二级小灵通.skill](https://github.com/xiaoerdata/erji-xiaolingtong/releases/download/v1.0.0/erji-xiaolingtong.skill)：标准技能包，ZIP 内容，适用于支持该格式的宿主。
-- [标准 ZIP](https://github.com/xiaoerdata/erji-xiaolingtong/releases/download/v1.0.0/erji-xiaolingtong.zip)：解压后按客户端方式安装文件夹。
-- [WorkBuddy ZIP](https://github.com/xiaoerdata/erji-xiaolingtong/releases/download/v1.0.0/erji-xiaolingtong-workbuddy.zip)：同一套内容，补充 WorkBuddy 官方格式要求的双语展示、版本和作者字段。
-- [SHA256SUMS](https://github.com/xiaoerdata/erji-xiaolingtong/releases/download/v1.0.0/SHA256SUMS)：校验下载文件。
-- [平台 MCP 接入指引](https://www.xiaoerdata.site/#/mcp/overview)：另有技能包下载入口。
+- [二级小灵通.skill](https://github.com/xiaoerdata/erji-xiaolingtong/releases/download/v1.0.1/erji-xiaolingtong.skill)：标准技能包，ZIP 内容，适用于支持该格式的宿主。
+- [标准 ZIP](https://github.com/xiaoerdata/erji-xiaolingtong/releases/download/v1.0.1/erji-xiaolingtong.zip)：解压后按客户端方式安装文件夹。
+- [WorkBuddy ZIP](https://github.com/xiaoerdata/erji-xiaolingtong/releases/download/v1.0.1/erji-xiaolingtong-workbuddy.zip)：同一套内容，补充 WorkBuddy 官方格式要求的双语展示、版本和作者字段。
+- [SHA256SUMS](https://github.com/xiaoerdata/erji-xiaolingtong/releases/download/v1.0.1/SHA256SUMS)：校验下载文件。
+- [平台 MCP 接入指引](https://www.xiaoerdata.site/#/mcp/overview)：从平台跳转至 GitHub 获取技能。
 
 ## 安装和使用
 
@@ -20,7 +20,7 @@
 
 发给 Agent：
 
-> 用二级小灵通，比较我关注的几只基金最近半年的收益和回撤。先核对我的小二 MCP 权限、实际数据日期及复权口径；没有权限的数据不要尝试绕过。
+> 用二级小灵通，比较我关注的几只基金最近半年的收益和回撤。先查看小二 MCP 的工具目录，核对实际数据日期及复权口径，再用相同区间比较；缺项要明确说明。
 
 或者直接给自己的文件：
 
@@ -43,7 +43,7 @@ MCP 服务：`https://www.xiaoerdata.site/mcp`（Streamable HTTP）。按[平台
 - `scripts/compare_nav.py`：纯本地共同日期净值比较，仅 Python 标准库，无网络。
 - `assets/example-nav.csv`：合成示例，不是实际业绩。
 
-脚本给出区间收益、至少一年区间的年化收益、共同观测点上的采样回撤。它不提供未经频率核对的夏普；Core 参考数据标为近似，缺失值不会补零。
+脚本给出区间收益、至少一年区间的年化收益、共同观测点上的采样回撤。它不提供未经频率核对的夏普；参考数据标为近似，缺失值不会补零。
 
 ## 开发与复核
 
@@ -52,6 +52,6 @@ python3 -m unittest discover -s tests
 python3 tools/package_skill.py
 ```
 
-产物在 `dist/`。标准 ZIP 与 `.skill` 字节一致；WorkBuddy ZIP 只改变入口元信息，不增加数据权限。案例工具候选经 Core 角色静态契约检查；这不替代各账号实际产品权限、当前部署状态及客户端实测。Skill 提供通用研究方法，不含收益承诺。
+产物在 `dist/`。标准 ZIP 与 `.skill` 字节一致；WorkBuddy ZIP 只补充展示元信息。示例能力名用于发现工具，实际调用使用当前目录的契约；平台返回的数据与来源说明应随分析保留。Skill 提供通用研究方法，不含收益承诺。
 
 许可：MIT。软件和文档许可不授予任何数据源的数据再分发权。
